@@ -1,0 +1,82 @@
+:root {
+  --bg-one: #0f0f14;
+  --bg-two: #0f0f10;
+  --active: #d2f400;
+  --white: #fff;
+  --gray: #3a3a4d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, var(--bg-one), var(--bg-two));
+}
+
+main {
+  width: 505px;
+  height: 500px;
+  border: 1px solid var(--gray);
+  display: flex;
+  flex-direction: column;
+}
+
+#chat-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: var(--gray);
+}
+
+#message-input {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 5px;
+  background-color: var(--bg-one);
+}
+
+#message-input input {
+  height: 40px;
+  padding: 0 10px;
+  border: none;
+  outline: none;
+  background: var(--gray);
+  color: var(--white);
+}
+
+#message-input button {
+    padding: 0px 20px;
+    background-color: var(--active);
+    color: var(--bg-one);
+    cursor: pointer;
+    border: none;
+}
+
+#message-input button:hover {
+    background-color: #cae900;
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+.message .username {
+    font-weight: bold;
+    color: var(--active);
+}
+
+.message .text {
+    margin-left: 10px;
+    color: var(--white);
+}
